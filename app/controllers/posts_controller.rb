@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.title = post_params(:title)
-    @post.content = author_params(:content)
+    @post.content = post_params(:content)
     @post.category = post_params(:category)
 
     if @post.valid?
