@@ -9,9 +9,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.title = post_params(:title)
-    @post.content = post_params(:content)
-    @post.category = post_params(:category)
+    @post.title = post_params[:title]
+    @post.content = post_params[:content]
+    @post.category = post_params[:category]
 
     if @post.valid?
       @post.save
